@@ -1,0 +1,62 @@
+[
+  {
+    "Id":0 ,
+    "Login":"t" ,
+    "Password":"D1A0EE7F347D0C6FA11A2ED347502AD4ABB869636E6BE98A815B70C50508137F" ,
+    "Name":"Тарас" ,
+    "Surname":"Шпарук" ,
+    "Age":"19" ,
+    "Number":"+38095*****07" ,
+    "Posts":[
+      3
+    ]
+  } ,
+  {
+    "Id":1 ,
+    "Login":"1" ,
+    "Password":"BC075387287F351CA875A5FE0BDF512A2BB82313247DD905BFAD75A62AB4C6A7" ,
+    "Name":"Іван" ,
+    "Surname":"Іванов" ,
+    "Age":"30" ,
+    "Number":"+380967542422" ,
+    "Posts":[
+      0
+    ]
+  } ,
+  {
+    "Id":2 ,
+    "Login":"asre" ,
+    "Password":"BC075387287F351CA875A5FE0BDF512A2BB82313247DD905BFAD75A62AB4C6A7" ,
+    "Name":"Марина" ,
+    "Surname":"Зубюк" ,
+    "Age":"34" ,
+    "Number":"+38054353454" ,
+    "Posts":[
+      2
+    ]
+  } ,
+  {
+    "Id":3 ,
+    "Login":"rRrRr" ,
+    "Password":"BC075387287F351CA875A5FE0BDF512A2BB82313247DD905BFAD75A62AB4C6A7" ,
+    "Name":"Роман" ,
+    "Surname":"Романов" ,
+    "Age":"52" ,
+    "Number":"+380686542930" ,
+    "Posts":[
+      2
+    ]
+  } ,
+  {
+    "Id":4 ,
+    "Login":"DEKAN" ,
+    "Password":"BC075387287F351CA875A5FE0BDF512A2BB82313247DD905BFAD75A62AB4C6A7" ,
+    "Name":"Кирило" ,
+    "Surname":"Кирилов" ,
+    "Age":"27" ,
+    "Number":"+380416534214" ,
+    "Posts":[
+      1
+    ]
+  }
+]

@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{7A0E22A8-2FD8-4B42-A94A-5C76ADCB79C6}</ProjectGuid>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>APPZ</RootNamespace>
+        <AssemblyName>APPZ</AssemblyName>
+        <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <WarningLevel>4</WarningLevel>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+          <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+        <Reference Include="System.Xaml">
+            <RequiredTargetFramework>4.0</RequiredTargetFramework>
+        </Reference>
+        <Reference Include="WindowsBase"/>
+        <Reference Include="PresentationCore"/>
+        <Reference Include="PresentationFramework"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ApplicationDefinition Include="App.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <SubType>Designer</SubType>
+        </ApplicationDefinition>
+        <Compile Include="App.xaml.cs">
+            <DependentUpon>App.xaml</DependentUpon>
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Include="Databases\Database.cs" />
+        <Compile Include="Databases\DecoratorHandler.cs" />
+        <Compile Include="Databases\EnumLocalisation.cs" />
+        <Compile Include="Databases\FileManager.cs" />
+        <Compile Include="Databases\StringCoding.cs" />
+        <Compile Include="Decorator\Requests\AbstractPool.cs" />
+        <Compile Include="Decorator\Requests\PoolAdministration.cs" />
+        <Compile Include="Decorator\Requests\PoolApproved.cs" />
+        <Compile Include="Decorator\Requests\PoolDeclined.cs" />
+        <Compile Include="Decorator\Requests\PoolManager.cs" />
+        <Compile Include="Decorator\Requests\RequestBudget.cs" />
+        <Compile Include="Decorator\Requests\PoolRedo.cs" />
+        <Compile Include="Decorator\Requests\Request.cs" />
+        <Compile Include="Decorator\Requests\RequestPersonnel.cs" />
+        <Compile Include="Decorator\Requests\PoolPending.cs" />
+        <Compile Include="Decorator\Users\Adapters\UserPoolApproved.cs" />
+        <Compile Include="Decorator\Users\Adapters\UserPoolAdministration.cs" />
+        <Compile Include="Decorator\Users\Adapters\UserPoolDeclined.cs" />
+        <Compile Include="Decorator\Users\Adapters\UserPoolPending.cs" />
+        <Compile Include="Decorator\Users\Adapters\UserPoolAccess.cs" />
+        <Compile Include="Decorator\Users\Adapters\UserPoolRedo.cs" />
+        <Compile Include="Decorator\Users\FuncDecorator.cs" />
+        <Compile Include="Decorator\Users\Functions\AddUser.cs" />
+        <Compile Include="Decorator\Users\Functions\ApproveRequest.cs" />
+        <Compile Include="Decorator\Users\Functions\ChangeRequest.cs" />
+        <Compile Include="Decorator\Users\Functions\InfoBudget.cs" />
+        <Compile Include="Decorator\Users\Functions\InfoPersonnel.cs" />
+        <Compile Include="Decorator\Users\Functions\InfoShow.cs" />
+        <Compile Include="Decorator\Users\Functions\SendBudget.cs" />
+        <Compile Include="Decorator\Users\Functions\SendPersonnel.cs" />
+        <Compile Include="Decorator\Users\Functions\Settings.cs" />
+        <Compile Include="Decorator\Users\FunctionsWindows\AddUserWindow.xaml.cs">
+          <DependentUpon>AddUserWindow.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Decorator\Users\FunctionsWindows\ApproveRequestWindow.xaml.cs">
+          <DependentUpon>ApproveRequestWindow.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Decorator\Users\FunctionsWindows\InfoRequestWindow.xaml.cs">
+          <DependentUpon>InfoRequestWindow.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Decorator\Users\FunctionsWindows\InfoShowWindow.xaml.cs">
+          <DependentUpon>InfoShowWindow.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Decorator\Users\FunctionsWindows\SendBudgetWindow.xaml.cs">
+          <DependentUpon>SendBudgetWindow.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Decorator\Users\FunctionsWindows\SendPersonnelWindow.xaml.cs">
+          <DependentUpon>SendPersonnelWindow.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Decorator\Users\FunctionsWindows\SettingsWindow.xaml.cs" />
+        <Compile Include="Decorator\Users\IUser.cs" />
+        <Compile Include="Decorator\Users\RequestWindowManager.cs" />
+        <Compile Include="Decorator\Users\User.cs" />
+        <Compile Include="Enums\RequestBudgetType.cs" />
+        <Compile Include="Enums\UserFunctions.cs" />
+        <Compile Include="Enums\UserPosts.cs" />
+        <Compile Include="Enums\RequestProps.cs" />
+        <Compile Include="Enums\RequestStatus.cs" />
+        <Compile Include="Enums\RequestType.cs" />
+        <Compile Include="Enums\UserPrivateProps.cs" />
+        <Compile Include="Enums\UserPublicProps.cs" />
+        <Compile Include="Enums\YesNo.cs" />
+        <Compile Include="Windows\ChangeWindow.xaml.cs">
+          <DependentUpon>ChangeWindow.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Windows\InputWindow.xaml.cs">
+          <DependentUpon>InputWindow.xaml</DependentUpon>
+        </Compile>
+        <Compile Include="Windows\TaskWindow.xaml.cs">
+          <DependentUpon>TaskWindow.xaml</DependentUpon>
+          <SubType>Code</SubType>
+        </Compile>
+        <Compile Include="Windows\WelcomeWindow.xaml.cs">
+          <DependentUpon>WelcomeWindow.xaml</DependentUpon>
+          <SubType>Code</SubType>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Properties\AssemblyInfo.cs">
+            <SubType>Code</SubType>
+        </Compile>
+        <Compile Include="Properties\Resources.Designer.cs">
+            <AutoGen>True</AutoGen>
+            <DesignTime>True</DesignTime>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+        <EmbeddedResource Include="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config" />
+        <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <Page Include="Decorator\Users\FunctionsWindows\AddUserWindow.xaml" />
+      <Page Include="Decorator\Users\FunctionsWindows\ApproveRequestWindow.xaml" />
+      <Page Include="Decorator\Users\FunctionsWindows\InfoRequestWindow.xaml" />
+      <Page Include="Decorator\Users\FunctionsWindows\InfoShowWindow.xaml" />
+      <Page Include="Decorator\Users\FunctionsWindows\SendBudgetWindow.xaml" />
+      <Page Include="Decorator\Users\FunctionsWindows\SendPersonnelWindow.xaml" />
+      <Page Include="Decorator\Users\FunctionsWindows\SettingsWindow.xaml" />
+      <Page Include="Windows\ChangeWindow.xaml" />
+      <Page Include="Windows\InputWindow.xaml" />
+      <Page Include="Windows\TaskWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Include="Windows\WelcomeWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Databases\Files\Users\Users.json" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Databases\Files\Requests\" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+</Project>
