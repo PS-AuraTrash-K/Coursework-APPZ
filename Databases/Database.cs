@@ -45,8 +45,7 @@ public class Database
     
     private User GetUser(string id)
     {
-        _currentUser = _users.FirstOrDefault(u => u.Id == int.Parse(id));
-        return _currentUser;
+        return _users.FirstOrDefault(u => u.Id == int.Parse(id));;
     }
     
     public bool CheckFreeLogin(string login) => _users.All(u => u.Login != login);
@@ -66,12 +65,12 @@ public class Database
         var newUser = prop == UserPrivateProps.Login
             ? new User(
                 _currentUser.Id,
-                new Dictionary<UserPrivateProps, string>()
+                new Dictionary<UserPrivateProps, string>
                 {
                     { UserPrivateProps.Login , newValue},
                     { UserPrivateProps.Password , _currentUser.Password}
                 },
-                new Dictionary<UserPublicProps, string>()
+                new Dictionary<UserPublicProps, string>
                 {
                     {UserPublicProps.Name , _currentUser.Name},
                     {UserPublicProps.Surname , _currentUser.Surname},
@@ -81,12 +80,12 @@ public class Database
                 _currentUser.Posts.Select(p => (int)p))
             : new User(
                 _currentUser.Id,
-                new Dictionary<UserPrivateProps, string>()
+                new Dictionary<UserPrivateProps, string>
                 {
                     { UserPrivateProps.Login , _currentUser.Login},
                     { UserPrivateProps.Password , Cipher.Encode(newValue)}
                 },
-                new Dictionary<UserPublicProps, string>()
+                new Dictionary<UserPublicProps, string>
                 {
                     {UserPublicProps.Name , _currentUser.Name},
                     {UserPublicProps.Surname , _currentUser.Surname},
@@ -117,12 +116,12 @@ public class Database
     private void SetUser(User user) =>
         SetUser(
             user.Id,
-            new Dictionary<UserPrivateProps, string>()
+            new Dictionary<UserPrivateProps, string>
             {
                 {UserPrivateProps.Login , user.Login},
                 {UserPrivateProps.Password , user.Password}
             },
-            new Dictionary<UserPublicProps, string>()
+            new Dictionary<UserPublicProps, string>
             {
                 {UserPublicProps.Name , user.Name},
                 {UserPublicProps.Surname , user.Surname},
