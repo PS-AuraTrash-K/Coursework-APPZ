@@ -26,7 +26,7 @@
   {
     "Id":2 ,
     "Login":"asre" ,
-    "Password":"BC075387287F351CA875A5FE0BDF512A2BB82313247DD905BFAD75A62AB4C6A7" ,
+    "Password":"080A189F22C0F67D78DC6CAF37CB63CF96A4FA98DE7BD0B9EDC04CAA8DAE06C5" ,
     "Name":"Марина" ,
     "Surname":"Зубюк" ,
     "Age":"34" ,
@@ -38,7 +38,7 @@
   {
     "Id":3 ,
     "Login":"rRrRr" ,
-    "Password":"BC075387287F351CA875A5FE0BDF512A2BB82313247DD905BFAD75A62AB4C6A7" ,
+    "Password":"065D40EE80D6B0831D2BEBCCB3A217FC7962D48CA79928043376CFC5FB71710D" ,
     "Name":"Роман" ,
     "Surname":"Романов" ,
     "Age":"52" ,
@@ -49,8 +49,8 @@
   } ,
   {
     "Id":4 ,
-    "Login":"DEKAN" ,
-    "Password":"BC075387287F351CA875A5FE0BDF512A2BB82313247DD905BFAD75A62AB4C6A7" ,
+    "Login":"Kyrylo" ,
+    "Password":"96353D172C9B0DDBF7194B6FE7B29A38465AEB136B1741E42FAA6BB0CC10F37B" ,
     "Name":"Кирило" ,
     "Surname":"Кирилов" ,
     "Age":"27" ,
